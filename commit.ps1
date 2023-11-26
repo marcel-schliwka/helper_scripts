@@ -20,6 +20,7 @@ if ($args.Count -eq 0) {
 $commitMessage = $args -join ' '
 
 try {
+    git pull
     git add .
     git commit -m $commitMessage
     git push
